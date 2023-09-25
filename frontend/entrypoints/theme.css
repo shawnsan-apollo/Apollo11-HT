@@ -1,6 +1,6 @@
 @import 'tailwindcss/base';
-@import '@/styles/base.css';
+@import '@/styles/base.scss';
 @import 'tailwindcss/components';
-@import '@/styles/components';
+@import '@/styles/components.scss';
 @import 'tailwindcss/utilities';
-@import '@/styles/utilities';
+@import '@/styles/utilities.scss';
