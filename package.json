@@ -8,7 +8,7 @@
     "dev:shop": "shopify theme dev -e store",
     "dev:shop:push": "shopify theme push -d -e store",
     "dev:vite": "vite",
-    "deploy": "pnpm run build && pnpm run deploy:shopify",
+    "deploy": "bun run build && bun run deploy:shopify",
     "deploy:shopify": "shopify theme push",
     "build": "vite build",
     "lint": "eslint .",
