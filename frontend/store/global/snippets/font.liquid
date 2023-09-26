@@ -1,0 +1,51 @@
+{% comment %}
+  This file defines the font variables and font faces for the theme.
+
+  Usage:
+  {% render 'font' %}
+{% endcomment %}
+
+{% style %}
+  :root  {
+    --font-heading-family: ui-sans-serif
+    , system-ui
+    , -apple-system
+    , BlinkMacSystemFont
+    , 'Segoe UI'
+    , Roboto;
+    --font-heading-style: normal;
+    --font-heading-weight: 400;
+    --font-heading-weight-bold: 700;
+
+    --font-body-family: ui-serif
+    , Georgia
+    , Cambria
+    , 'Times New Roman'
+    , Times
+    , serif;
+    --font-body-style: normal;
+    --font-body-weight: 400;
+    --font-body-weight-bold: 600;
+  }
+
+  @font-face {
+    font-family: 'Nimbus';
+    src: url('@/fonts/NimbusSanExt-Bol.ttf') format('ttf');
+    font-display: swap;
+    font-style: normal;
+  }
+  @font-face {
+    font-family: 'Gibson';
+    src: url('@/fonts/Gibson-Book.ttf') format('ttf');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 300;
+  }
+  @font-face {
+    font-family: 'Gibson';
+    src: url('@/fonts/Gibson-Medium.ttf') format('ttf');
+    font-display: swap;
+    font-style: normal;
+    font-weight: 500;
+  }
+{% endstyle %}

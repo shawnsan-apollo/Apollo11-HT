@@ -8,5 +8,30 @@
   },
   "[liquid]": {
     "editor.formatOnSave": true
-  }
+  },
+  "files.exclude": {
+    "node_modules": true,
+    "public": false,
+    ".vite": true,
+    ".github": true,
+    ".storybook": true,
+    "layout": false,
+    ".shopifyignore": false,
+    ".stylelintrc.json": false,
+    "package-lock.json": true,
+    "pnpm-lock.yaml": true,
+    "shopify.theme.toml": true,
+    ".eslintrc.*": true,
+    ".eslintignore":true,
+    ".prettierignore":true,
+    ".prettierrc.*":true,
+    "bun.lockb":true,
+    "jsconfig.json":true,
+    "postcss.config.cjs":true,
+    "LICENSE.md":true,
+    "sections":true,
+    "snippets":true,
+    "templates":true,
+    "assets":true,
+  },
 }
