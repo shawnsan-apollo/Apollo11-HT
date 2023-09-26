@@ -9,7 +9,10 @@
       {%- if section.settings.menu != blank -%}
         <header-drawer client:media="(max-width: 1023px)">
           <details>
-            <summary class="w-8 h-8 [.no-js_details[open]_&]:absolute [.no-js_details[open]_&]:left-1/2 [.no-js_details[open]_&]:z-50 [.no-js_details[open]_&]:-translate-x-1/2 [.no-js_details[open]_&]:-translate-y-1/2 [.menu-opening_&]:before:absolute [.menu-opening_&]:before:inset-0 [.menu-opening_&]:before:h-screen [.menu-opening_&]:before:bg-black/25" aria-haspopup="dialog" aria-label="{{ 'sections.header.menu' | t }}">
+            <summary
+              class="w-8 h-8 [.no-js_details[open]_&]:absolute [.no-js_details[open]_&]:left-1/2 [.no-js_details[open]_&]:z-50 [.no-js_details[open]_&]:-translate-x-1/2 [.no-js_details[open]_&]:-translate-y-1/2 [.menu-opening_&]:before:absolute [.menu-opening_&]:before:inset-0 [.menu-opening_&]:before:h-screen [.menu-opening_&]:before:bg-black/25"
+              aria-haspopup="dialog"
+              aria-label="{{ 'sections.header.menu' | t }}">
               <span class="w-full h-full flex items-center justify-center [.no-js_details[open]_&]:hidden">
                 {% render 'icon-menu' %}
               </span>
@@ -17,16 +20,29 @@
                 {%- render 'icon-close' -%}
               </span>
             </summary>
-            <div id="menu-drawer" class="fixed inset-0 h-screen bg-contrast z-20 max-w-lg overflow-y-auto [.js_&]:transition [.js_&]:duration-300 [.js_&]:-translate-x-full [.js_.menu-opening_&]:translate-x-0" role="dialog" aria-modal="true" aria-label="{{ 'sections.header.menu' | t }}" tabindex="-1">
+            <div
+              id="menu-drawer"
+              class="fixed inset-0 h-screen bg-contrast z-20 max-w-lg overflow-y-auto [.js_&]:transition [.js_&]:duration-300 [.js_&]:-translate-x-full [.js_.menu-opening_&]:translate-x-0"
+              role="dialog"
+              aria-modal="true"
+              aria-label="{{ 'sections.header.menu' | t }}"
+              tabindex="-1">
               <div class="flex items-center px-6 h-nav sm:px-8 md:px-12 justify-between">
                 <h2 class="max-w-prose font-body-weight-bold text-lead">{{ 'sections.header.menu' | t }}</h2>
-                <button type="button" class="p-4 -m-4 transition text-primary hover:text-primary/50 [.no-js_details[open]_&]:hidden" aria-label="{{ 'accessibility.close' | t }}">
+                <button
+                  type="button"
+                  class="p-4 -m-4 transition text-primary hover:text-primary/50 [.no-js_details[open]_&]:hidden"
+                  aria-label="{{ 'accessibility.close' | t }}">
                   {%- render 'icon-close' -%}
                 </button>
               </div>
               <nav class="grid gap-4 px-6 py-6 sm:gap-6 sm:px-12 sm:py-8 text-copy after:content-[''] after:block after:h-nav">
                 {%- for link in section.settings.menu.links -%}
-                  <a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>
+                  <a
+                    href="{{ link.url }}"
+                    {% if link.current %}
+                    aria-current="page"
+                    {% endif %}>
                     {{ link.title | escape }}
                   </a>
                 {%- endfor -%}
@@ -36,19 +52,26 @@
         </header-drawer>
       {%- endif -%}
 
-      <form action="{{ routes.search_url }}" method="get" role="search" class="items-center gap-2 sm:flex w-full max-w-[335px]">
-        <input type="hidden" name="type" value="product">
+      <form
+        action="{{ routes.search_url }}"
+        method="get"
+        role="search"
+        class="items-center gap-2 sm:flex w-full max-w-[335px]">
+        <input
+          type="hidden"
+          name="type"
+          value="product">
 
         <button type="submit" class="flex items-center justify-center w-8 h-8">
           {% render 'icon-search' %}
           <span class="sr-only">{{ 'general.search.search' | t }}</span>
         </button>
 
-        <input class="{{ input_class }} bg-transparent hidden md:inline-block text-left lg:text-right border-b transition border-transparent -mb-px border-x-0 border-t-0 appearance-none px-0 py-1 focus:ring-transparent placeholder:opacity-20 placeholder:text-inherit"
+        <input
+          class="{{ input_class }} bg-transparent hidden md:inline-block text-left lg:text-right border-b transition border-transparent -mb-px border-x-0 border-t-0 appearance-none px-0 py-1 focus:ring-transparent placeholder:opacity-20 placeholder:text-inherit"
           type="search"
           name="q"
-          placeholder="{{ 'general.search.search' | t }}"
-        >
+          placeholder="{{ 'general.search.search' | t }}">
       </form>
     </div>
 
@@ -56,9 +79,9 @@
       {%- if request.page_type == 'index' -%}
         <h1 class="w-full lg:w-auto">
       {%- endif %}
-          <a href="{{ routes.root_url }}" class="flex items-center self-stretch leading-[3rem] justify-center flex-grow w-full h-full font-heading font-heading-weight md:leading-[4rem] lg:inline lg:w-auto lg:h-auto lg:leading-none">
-            {{ shop.name }}
-          </a>
+      <a href="{{ routes.root_url }}" class="flex items-center self-stretch leading-[3rem] justify-center flex-grow w-full h-full font-heading font-heading-weight md:leading-[4rem] lg:inline lg:w-auto lg:h-auto lg:leading-none">
+        {{ shop.name }}
+      </a>
       {%- if request.page_type == 'index' -%}
         </h1>
       {%- endif %}
@@ -73,12 +96,16 @@
     </div>
 
     <div class="flex items-center justify-end w-full gap-4 lg:gap-1 lg:w-auto">
-      <form action="{{ routes.search_url }}" method="get" role="search" class="hidden lg:flex items-center gap-2">
-        <input class="{{ input_class }} bg-transparent hidden md:inline-block text-left lg:text-right border-b transition border-transparent -mb-px border-x-0 border-t-0 appearance-none px-0 py-1 focus:ring-transparent placeholder:opacity-20 placeholder:text-inherit"
+      <form
+        action="{{ routes.search_url }}"
+        method="get"
+        role="search"
+        class="hidden lg:flex items-center gap-2">
+        <input
+          class="{{ input_class }} bg-transparent hidden md:inline-block text-left lg:text-right border-b transition border-transparent -mb-px border-x-0 border-t-0 appearance-none px-0 py-1 focus:ring-transparent placeholder:opacity-20 placeholder:text-inherit"
           type="search"
           name="q"
-          placeholder="{{ 'general.search.search' | t }}"
-        >
+          placeholder="{{ 'general.search.search' | t }}">
 
         <button type="submit" class="flex items-center justify-center w-8 h-8">
           {% render 'icon-search' %}
@@ -101,7 +128,10 @@
         </a>
       {%- endif -%}
 
-      <a href="{{ routes.cart_url }}" class="relative flex items-center justify-center w-8 h-8" id="cart-icon-bubble">
+      <a
+        href="{{ routes.cart_url }}"
+        class="relative flex items-center justify-center w-8 h-8"
+        id="cart-icon-bubble">
         {%- render 'cart-icon-bubble' -%}
       </a>
     </div>
@@ -149,23 +179,42 @@
 {%- endif -%}
 
 {% schema %}
-{
-  "name": "Header",
-  "class": "z-10",
-  "settings": [
-    {
-      "type": "link_list",
-      "id": "menu",
-      "default": "main-menu",
-      "label": "Primary navigation"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_sticky_header",
-      "default": true,
-      "label": "Enable sticky header",
-      "info": "Header shows on the screen as customers scroll up."
-    }
-  ]
-}
+  {
+    "name": "Header",
+    "class": "z-10",
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "menu",
+        "default": "main-menu",
+        "label": "Primary navigation"
+      },
+      {
+        "type": "checkbox",
+        "id": "enable_sticky_header",
+        "default": true,
+        "label": "Enable sticky header",
+        "info": "Header shows on the screen as customers scroll up."
+      },
+      {
+        "type": "header",
+        "content": "t:sections.header.settings.header__1.content"
+      },
+      {
+        "type": "color_scheme",
+        "id": "color_scheme",
+        "label": "t:sections.all.colors.label",
+        "default": "background-1"
+      }, {
+        "type": "color_scheme",
+        "id": "menu_color_scheme",
+        "label": "t:sections.header.settings.menu_color_scheme.label",
+        "default": "background-1"
+      }, {
+        "type": "header",
+        "content": "t:sections.header.settings.header__3.content",
+        "info": "t:sections.header.settings.header__4.info"
+      }
+    ]
+  }
 {% endschema %}

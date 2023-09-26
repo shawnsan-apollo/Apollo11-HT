@@ -20,7 +20,7 @@
     ".stylelintrc.json": false,
     "package-lock.json": true,
     "pnpm-lock.yaml": true,
-    "shopify.theme.toml": true,
+    "shopify.theme.toml": false,
     ".eslintrc.*": true,
     ".eslintignore":true,
     ".prettierignore":true,

@@ -1,0 +1,33 @@
+{%- liquid
+  assign body_font_bold = settings.type_body_font | font_modify: 'weight', 'bold'
+  assign body_font_italic = settings.type_body_font | font_modify: 'style', 'italic'
+  assign body_font_bold_italic = body_font_bold | font_modify: 'style', 'italic'
+%}
+
+{% style %}
+  {{ settings.type_body_font | font_face: font_display: 'swap' }}
+  {{ body_font_bold | font_face: font_display: 'swap' }}
+  {{ body_font_italic | font_face: font_display: 'swap' }}
+  {{ body_font_bold_italic | font_face: font_display: 'swap' }}
+  {{ settings.type_header_font | font_face: font_display: 'swap' }}:root
+  {
+    --font-body-family-fallback: {{ settings.type_body_font.family }}, 
+    {{ settings.type_body_font.fallback_families }};
+    --font-body-weight: {{ settings.type_body_font.weight }};
+    --font-body-weight-bold: {{ settings.type_body_font.weight | plus: 300 | at_most: 1000 }};
+
+    --font-heading-family-fallback: {{ settings.type_header_font.family }}, 
+    {{ settings.type_header_font.fallback_families }};
+    --font-heading-weight: {{ settings.type_header_font.weight }};
+
+    --color-primary: {{ settings.colors_primary.red }}
+    {{ settings.colors_primary.green }}
+    {{ settings.colors_primary.blue }};
+    --color-contrast: {{ settings.colors_contrast.red }}
+    {{ settings.colors_contrast.green }}
+    {{ settings.colors_contrast.blue }};
+    --color-accent: {{ settings.colors_accent.red }}
+    {{ settings.colors_accent.green }}
+    {{ settings.colors_accent.blue }};
+  }
+{% endstyle %}

@@ -14,7 +14,7 @@ export default defineConfig({
       clean: false,
     }),
     globs({
-      globs: ['frontend/liquid/**/snippets/*.liquid'],
+      globs: ['frontend/store/**/snippets/*.liquid'],
       dest: 'snippets',
       clean: false,
     }),
