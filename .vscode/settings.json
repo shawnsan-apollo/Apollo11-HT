@@ -32,6 +32,6 @@
     "sections":true,
     "snippets":true,
     "templates":true,
-    "assets":true,
+    "assets":false,
   },
 }

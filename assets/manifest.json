@@ -18,7 +18,7 @@
     "src": "frontend/entrypoints/customers.js"
   },
   "frontend/entrypoints/theme.css": {
-    "file": "theme.d1d4fc39.min.css",
+    "file": "theme.90976ff0.min.css",
     "isEntry": true,
     "src": "frontend/entrypoints/theme.css"
   },
@@ -39,29 +39,18 @@
       "frontend/islands/quantity-input.js",
       "frontend/islands/sticky-header.js",
       "frontend/islands/variant-radios.js",
-      "frontend/islands/variant-selects.js"
+      "frontend/islands/variant-selects.js",
+      "frontend/store/global/scripts/service-worker.js"
     ],
-    "file": "theme.a748b9c0.min.js",
+    "file": "theme.37548d24.min.js",
     "imports": [
       "_modulepreload-polyfill.fcabaeeb.min.js"
     ],
     "isEntry": true,
     "src": "frontend/entrypoints/theme.js"
   },
-  "frontend/fonts/exv_Gibson-Regular.ttf": {
-    "file": "exv_Gibson-Regular.0072c6f1.min.ttf",
-    "src": "frontend/fonts/exv_Gibson-Regular.ttf"
-  },
-  "frontend/fonts/exv_GibsonBook.ttf": {
-    "file": "exv_GibsonBook.43704db3.min.ttf",
-    "src": "frontend/fonts/exv_GibsonBook.ttf"
-  },
-  "frontend/fonts/exv_NimbusSansExtdBold.ttf": {
-    "file": "exv_NimbusSansExtdBold.51ae5e8d.min.ttf",
-    "src": "frontend/fonts/exv_NimbusSansExtdBold.ttf"
-  },
   "frontend/islands/cart-drawer-items.js": {
-    "file": "cart-drawer-items.1dbd89db.min.js",
+    "file": "cart-drawer-items.3c550a4e.min.js",
     "imports": [
       "frontend/islands/cart-items.js",
       "_utils.3b9fa9c2.min.js",
@@ -72,7 +61,7 @@
     "src": "frontend/islands/cart-drawer-items.js"
   },
   "frontend/islands/cart-drawer.js": {
-    "file": "cart-drawer.e7edb071.min.js",
+    "file": "cart-drawer.a28bb57a.min.js",
     "imports": [
       "frontend/entrypoints/theme.js",
       "_modulepreload-polyfill.fcabaeeb.min.js"
@@ -81,7 +70,7 @@
     "src": "frontend/islands/cart-drawer.js"
   },
   "frontend/islands/cart-items.js": {
-    "file": "cart-items.5635e353.min.js",
+    "file": "cart-items.c6d569c8.min.js",
     "imports": [
       "_utils.3b9fa9c2.min.js",
       "frontend/entrypoints/theme.js",
@@ -109,7 +98,7 @@
     "src": "frontend/islands/details-disclosure.js"
   },
   "frontend/islands/details-modal.js": {
-    "file": "details-modal.fee11171.min.js",
+    "file": "details-modal.55bb1a48.min.js",
     "imports": [
       "frontend/entrypoints/theme.js",
       "_modulepreload-polyfill.fcabaeeb.min.js"
@@ -118,7 +107,7 @@
     "src": "frontend/islands/details-modal.js"
   },
   "frontend/islands/header-drawer.js": {
-    "file": "header-drawer.c1994b04.min.js",
+    "file": "header-drawer.efcfb6c6.min.js",
     "imports": [
       "frontend/entrypoints/theme.js",
       "frontend/islands/details-modal.js",
@@ -133,7 +122,7 @@
     "src": "frontend/islands/localization-form.js"
   },
   "frontend/islands/password-modal.js": {
-    "file": "password-modal.a8f618bd.min.js",
+    "file": "password-modal.66283548.min.js",
     "imports": [
       "frontend/islands/details-modal.js",
       "frontend/entrypoints/theme.js",
@@ -187,5 +176,10 @@
     "file": "shopify_common.20499185.min.js",
     "isDynamicEntry": true,
     "src": "frontend/lib/shopify_common.js"
+  },
+  "frontend/store/global/scripts/service-worker.js": {
+    "file": "service-worker.4eb1b112.min.js",
+    "isDynamicEntry": true,
+    "src": "frontend/store/global/scripts/service-worker.js"
   }
 }

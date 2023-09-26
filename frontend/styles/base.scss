@@ -1,23 +1,4 @@
-@font-face {
-  font-family: 'Nimbus';
-  src: url('@/fonts/exv_NimbusSansExtdBold.ttf') format('ttf');
-  font-display: swap;
-  font-style: normal;
-}
-@font-face {
-  font-family: 'Gibson';
-  src: url('@/fonts/exv_GibsonBook.ttf') format('ttf');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 300;
-}
-@font-face {
-  font-family: 'Gibson';
-  src: url('@/fonts/exv_Gibson-Regular.ttf') format('ttf');
-  font-display: swap;
-  font-style: normal;
-  font-weight: 500;
-}
+
 :root {
   --font-heading-family: 'Gibson', sans-serif;
   --font-body-family: 'Nimbus', sans-serif;
